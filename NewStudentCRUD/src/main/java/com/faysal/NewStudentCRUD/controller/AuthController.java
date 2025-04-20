@@ -3,7 +3,6 @@ package com.faysal.NewStudentCRUD.controller;
 import java.util.HashMap;
 import java.util.Map;
 
-//import org.isdb.StudentCRUD.model.LoginRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -15,7 +14,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.faysal.NewStudentCRUD.config.JwtTokenProvider;
+import com.faysal.NewStudentCRUD.model.CustomUserDetails;
 import com.faysal.NewStudentCRUD.model.LoginRequest;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -30,18 +33,25 @@ public class AuthController {
 	}
 
 	@PostMapping("/login")
-	public ResponseEntity<?> authenticateUser(@RequestBody LoginRequest loginRequest) {
+	public ResponseEntity<?> authenticateUser(HttpServletRequest request, HttpServletResponse response,
+			@RequestBody LoginRequest loginRequest) {
 		Authentication authentication = authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken(loginRequest.username(), loginRequest.password()));
 
+		Object principal = authentication.getPrincipal();
+		if (principal instanceof CustomUserDetails) {
+			System.out.println("User is instance of CustomUserDetails");
+		}
+
 		SecurityContextHolder.getContext().setAuthentication(authentication);
 		String jwt = jwtTokenProvider.createToken(authentication);
+		System.out.println("Token: " + jwt);
 
-		Map<String, String> response = new HashMap<>();
-		response.put("token", jwt);
-		response.put("tokenType", "Bearer");
+		Map<String, String> res = new HashMap<>();
+		res.put("token", jwt);
+		res.put("tokenType", "Bearer");
 
-		return ResponseEntity.ok(response);
+		return ResponseEntity.ok(res);
 	}
 
 }
