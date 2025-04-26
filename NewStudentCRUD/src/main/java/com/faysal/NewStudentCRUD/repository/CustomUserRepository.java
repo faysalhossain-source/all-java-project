@@ -1,7 +1,7 @@
 package com.faysal.NewStudentCRUD.repository;
 
-import com.faysal.NewStudentCRUD.model.CustomUser;
+import com.faysal.NewStudentCRUD.model.User;
 
 public interface CustomUserRepository {
-	CustomUser findCustomUserByEmail(String email);
+	User findCustomUserByEmail(String email);
 }

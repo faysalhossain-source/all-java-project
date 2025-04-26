@@ -11,8 +11,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-public class AdvanceSecurityController {
+@RestController
+@RequestMapping("/api/secured")
+public class AdvancedSecurityController {
+
 	/**
 	 * Demonstrates method-level security with @PreAuthorize This method is only
 	 * accessible to users with REGULAR_USER role or higher
@@ -103,7 +108,7 @@ public class AdvanceSecurityController {
 	 * Demonstrates a method that requires multiple roles
 	 */
 	@GetMapping("/system/config")
-	@PreAuthorize("hasRole('ADMIN') and hasAuthority('SYSTEM_CONFIG')")
+	@PreAuthorize("hasRole('REGULAR_USER') and hasAuthority('SENIOR')")
 	public Map<String, String> getSystemConfig() {
 		Map<String, String> config = new HashMap<>();
 		config.put("maintenance", "false");
@@ -112,5 +117,4 @@ public class AdvanceSecurityController {
 		config.put("auditEnabled", "true");
 		return config;
 	}
-
 }
