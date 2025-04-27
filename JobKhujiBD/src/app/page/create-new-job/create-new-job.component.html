@@ -1,0 +1,61 @@
+<section class="create-job-section container py-4">
+  <h3 class="mb-4">নতুন চাকরির পোস্ট তৈরি করুন</h3>
+
+  <div class="row gy-3">
+
+    <!-- Job Title -->
+    <div class="col-12 col-md-6">
+      <label class="form-label">চাকরির শিরোনাম</label>
+      <input type="text" class="form-control" [(ngModel)]="jobObj.JobName" name="JobName"
+        placeholder="যেমন: Software Engineer" />
+    </div>
+
+    <!-- Category -->
+    <div class="col-12 col-md-6">
+      <label class="form-label">বিভাগ নির্বাচন করুন</label>
+      <select class="form-select" [(ngModel)]="jobObj.CategoryId" name="CategoryId">
+        <option [ngValue]="null" disabled selected>বিভাগ নির্বাচন</option>
+        <option *ngFor="let cat of categoryList" [ngValue]="cat.jobCategoryId">
+          {{ cat.categoryName }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Experience -->
+    <div class="col-12 col-md-6">
+      <label class="form-label">অভিজ্ঞতা</label>
+      <select class="form-select" [(ngModel)]="jobObj.Experience" name="Experience">
+        <option value="" disabled selected>অভিজ্ঞতা নির্বাচন</option>
+        <option value="Fresher">Fresher</option>
+        <option value="Experienced">Experienced</option>
+      </select>
+    </div>
+
+    <!-- Package -->
+    <div class="col-12 col-md-6">
+      <label class="form-label">পে স্কেল (Package)</label>
+      <input type="text" class="form-control" [(ngModel)]="jobObj.Package" name="Package" placeholder="যেমন: 30k-50k" />
+    </div>
+
+    <!-- Location -->
+    <div class="col-12 col-md-6">
+      <label class="form-label">অবস্থান</label>
+      <input type="text" class="form-control" [(ngModel)]="jobObj.Location" name="Location" placeholder="যেমন: Dhaka" />
+    </div>
+
+    <!-- Description -->
+    <div class="col-12">
+      <label class="form-label">চাকরির বিস্তারিত</label>
+      <textarea class="form-control" [(ngModel)]="jobObj.JobDescription" name="JobDescription" rows="4"
+        placeholder="চাকরির বর্ণনা লিখুন..."></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="col-12 text-center">
+      <button (click)="CreateJob()" class="btn btn-success btn-lg px-5" type="button">
+        পোস্ট করুন
+      </button>
+    </div>
+
+  </div>
+</section>

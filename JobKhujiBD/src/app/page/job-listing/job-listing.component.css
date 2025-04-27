@@ -1,0 +1,18 @@
+table th, table td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  button.btn-sm {
+    padding: 4px 12px;
+    font-size: 14px;
+  }
+  
+  .bg-light {
+    background-color: #f8f9fa !important;
+  }
+  
+  h6 {
+    font-weight: 600;
+  }
+  

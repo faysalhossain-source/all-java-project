@@ -1,0 +1,68 @@
+<div class="container-fluid pt-3">
+    <div class="row">
+      <!-- Left Filter -->
+      <div class="col-3 filter">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="text-center">All Filter</h6>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Job Listings -->
+      <div class="col-6 job">
+        <div class="row pt-2" *ngFor="let job of jobList">
+          <div class="col-12">
+            <div class="card job-card" (click)="openJob(job.jobId)">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-8">
+                    <h6 class="mb-1">{{ job.jobName }}</h6>
+                    <a class="company-name">{{ job.companyName }}</a>
+                  </div>
+                  <div class="col-4 text-end">
+                    <img class="compo-logo" [src]="job.logoURL" alt="Logo" />
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-4">
+                    <i class="fa fa-suitcase"></i> {{ job.experience }}
+                  </div>
+                  <div class="col-4">
+                    <i class="fa fa-inr"></i> {{ job.package }}
+                  </div>
+                  <div class="col-4">
+                    <i class="fa fa-map-marker"></i> {{ job.location }}
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-12">
+                    <i class="fa fa-file-text-o"></i> 
+                    <span class="text-muted">{{ job.jobName | slice: 0:50 }}...</span>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-6">
+                    <small>Few Hours Ago</small>
+                  </div>
+                  <div class="col-6 text-end">
+                    <i class="fa fa-bookmark"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Right Top Companies -->
+      <div class="col-3 filter">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="text-center">Top Companies Hiring</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

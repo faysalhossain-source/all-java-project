@@ -1,0 +1,45 @@
+<div class="container mt-4">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <label for="categoryName" class="form-label">Name</label>
+        <input
+          id="categoryName"
+          type="text"
+          class="form-control"
+          [(ngModel)]="categoryObj.CategoryName"
+          name="CategoryName"
+          required
+        />
+      </div>
+  
+      <div class="col-md-4">
+        <label for="imageUrl" class="form-label">Image URL</label>
+        <input
+          id="imageUrl"
+          type="text"
+          class="form-control"
+          [(ngModel)]="categoryObj.ImageUrl"
+          name="ImageUrl"
+          required
+        />
+      </div>
+  
+      <div class="col-md-2 d-flex align-items-center">
+        <div class="form-check">
+          <input
+            id="isActive"
+            type="checkbox"
+            class="form-check-input"
+            [(ngModel)]="categoryObj.IsActive"
+            name="IsActive"
+          />
+          <label for="isActive" class="form-check-label">Is Active</label>
+        </div>
+      </div>
+  
+      <div class="col-md-2 d-flex align-items-end">
+        <button class="btn btn-success w-100" (click)="onSave()">Save</button>
+      </div>
+    </div>
+  </div>
+  

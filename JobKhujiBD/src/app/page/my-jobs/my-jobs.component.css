@@ -1,0 +1,12 @@
+.h-custom {
+    height: 100vh;
+  }
+  
+  .card {
+    border: none;
+  }
+  
+  .btn-group .btn {
+    min-width: 150px;
+  }
+  
