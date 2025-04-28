@@ -72,3 +72,8 @@
 .slide img:hover {
   transform: scale(1.05); /* halka boro hover e */
 }
+.blueda{
+  display: flex;
+  margin: 15px 0;
+  justify-content: center;
+}

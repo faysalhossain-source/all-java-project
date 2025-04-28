@@ -16,7 +16,7 @@ export class JobsComponent {
       companyName: 'ABC Tech',
       logoURL: 'https://via.placeholder.com/50',
       experience: '2-4 years',
-      package: '6-8 LPA',
+      package: '💰 6–8 Lakh Taka Per Year',
       location: 'Dhaka',
     },
     {
@@ -25,7 +25,7 @@ export class JobsComponent {
       companyName: 'XYZ Solutions',
       logoURL: 'https://via.placeholder.com/50',
       experience: '1-3 years',
-      package: '5-7 LPA',
+      package: '💰 5–7 Lakh Taka Per Year',
       location: 'Chattogram',
     },
     {
@@ -34,7 +34,7 @@ export class JobsComponent {
       companyName: 'Tech Innovators',
       logoURL: 'https://via.placeholder.com/50',
       experience: '3-5 years',
-      package: '8-10 LPA',
+      package: '💰 8–10 Lakh Taka Per Year',
       location: 'Sylhet',
     },
     {
@@ -43,7 +43,7 @@ export class JobsComponent {
       companyName: 'Data Insights',
       logoURL: 'https://via.placeholder.com/50',
       experience: '2-4 years',
-      package: '7-9 LPA',
+      package: '💰 7–9 Lakh Taka Per Year',
       location: 'Rajshahi',
     },
     {
@@ -52,7 +52,7 @@ export class JobsComponent {
       companyName: 'Creative Minds',
       logoURL: 'https://via.placeholder.com/50',
       experience: '1-2 years',
-      package: '4-6 LPA',
+      package: '💰 4–5 Lakh Taka Per Year',
       location: 'Khulna',
     },
   ];

@@ -20,16 +20,14 @@
                     <h6 class="mb-1">{{ job.jobName }}</h6>
                     <a class="company-name">{{ job.companyName }}</a>
                   </div>
-                  <div class="col-4 text-end">
-                    <img class="compo-logo" [src]="job.logoURL" alt="Logo" />
-                  </div>
+                  
                 </div>
                 <div class="row mt-2">
                   <div class="col-4">
                     <i class="fa fa-suitcase"></i> {{ job.experience }}
                   </div>
                   <div class="col-4">
-                    <i class="fa fa-inr"></i> {{ job.package }}
+                    {{ job.package }}
                   </div>
                   <div class="col-4">
                     <i class="fa fa-map-marker"></i> {{ job.location }}
