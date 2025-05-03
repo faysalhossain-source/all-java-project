@@ -7,15 +7,47 @@ import { JobsComponent } from './page/jobs/jobs.component';
 import { LoginComponent } from './page/login/login.component';
 import { RegistrationComponent } from './page/registration/registration.component';
 import { MyJobsComponent } from './page/my-jobs/my-jobs.component';
+import { RemoteJobsComponent } from './alljobs/remote/remote.component';
+import { MainlayoutComponent } from './admin/mainlayout/mainlayout.component';
+import { DeshboardComponent } from './admin/deshboard/deshboard.component';
+import { HomeMainComponentComponent } from './page/home-main-component/home-main-component.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'create-new-job', component: CreateNewJobComponent },
-  { path: 'job-details', component: JobDetailsComponent },
-  { path: 'job-listing', component: JobListingComponent },
-  { path: 'jobs', component: JobsComponent },
-  { path: 'my-jobs', component: MyJobsComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegistrationComponent },
+  {
+    path: 'admin',
+    component:MainlayoutComponent,
+    children:[
+      {
+        path:'',
+        redirectTo:'deshboard',
+        pathMatch: 'full'
+      },
+      {
+        path:'deshboard',
+        component:DeshboardComponent
+      }
+    ]
+  },
+
+  {
+    path:'',
+    component:HomeMainComponentComponent,
+    children:[
+      
+        { path: '', component: HomeComponent },
+        { path: 'create-new-job', component: CreateNewJobComponent },
+        { path: 'job-details', component: JobDetailsComponent },
+        { path: 'job-listing', component: JobListingComponent },
+        { path: 'jobs', component: JobsComponent },
+        { path: 'my-jobs', component: MyJobsComponent },
+        { path: 'login', component: LoginComponent },
+        { path: 'register', component: RegistrationComponent },
+        {path:'remote' ,component:RemoteJobsComponent},
+  
+    ]
+  }
+  
   // { path: '**', redirectTo: '' } // Redirect any undefined route to home
+
+  
 ];
