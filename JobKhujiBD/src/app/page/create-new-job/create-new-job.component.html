@@ -1,20 +1,20 @@
 <section class="create-job-section container py-4">
-  <h3 class="mb-4">নতুন চাকরির পোস্ট তৈরি করুন</h3>
+  <h3 class="mb-4">Create a New Job Post</h3>
 
   <div class="row gy-3">
 
     <!-- Job Title -->
     <div class="col-12 col-md-6">
-      <label class="form-label">চাকরির শিরোনাম</label>
+      <label class="form-label">Job Title</label>
       <input type="text" class="form-control" [(ngModel)]="jobObj.JobName" name="JobName"
-        placeholder="যেমন: Software Engineer" />
+        placeholder="e.g. Software Engineer" />
     </div>
 
     <!-- Category -->
     <div class="col-12 col-md-6">
-      <label class="form-label">বিভাগ নির্বাচন করুন</label>
+      <label class="form-label">Select Category</label>
       <select class="form-select" [(ngModel)]="jobObj.CategoryId" name="CategoryId">
-        <option [ngValue]="null" disabled selected>বিভাগ নির্বাচন</option>
+        <option [ngValue]="null" disabled selected>Select a Category</option>
         <option *ngFor="let cat of categoryList" [ngValue]="cat.jobCategoryId">
           {{ cat.categoryName }}
         </option>
@@ -23,9 +23,9 @@
 
     <!-- Experience -->
     <div class="col-12 col-md-6">
-      <label class="form-label">অভিজ্ঞতা</label>
+      <label class="form-label">Experience</label>
       <select class="form-select" [(ngModel)]="jobObj.Experience" name="Experience">
-        <option value="" disabled selected>অভিজ্ঞতা নির্বাচন</option>
+        <option value="" disabled selected>Select Experience</option>
         <option value="Fresher">Fresher</option>
         <option value="Experienced">Experienced</option>
       </select>
@@ -33,27 +33,27 @@
 
     <!-- Package -->
     <div class="col-12 col-md-6">
-      <label class="form-label">পে স্কেল (Package)</label>
-      <input type="text" class="form-control" [(ngModel)]="jobObj.Package" name="Package" placeholder="যেমন: 30k-50k" />
+      <label class="form-label">Pay Scale (Package)</label>
+      <input type="text" class="form-control" [(ngModel)]="jobObj.Package" name="Package" placeholder="e.g. 30k-50k" />
     </div>
 
     <!-- Location -->
     <div class="col-12 col-md-6">
-      <label class="form-label">অবস্থান</label>
-      <input type="text" class="form-control" [(ngModel)]="jobObj.Location" name="Location" placeholder="যেমন: Dhaka" />
+      <label class="form-label">Location</label>
+      <input type="text" class="form-control" [(ngModel)]="jobObj.Location" name="Location" placeholder="e.g. Dhaka" />
     </div>
 
     <!-- Description -->
     <div class="col-12">
-      <label class="form-label">চাকরির বিস্তারিত</label>
+      <label class="form-label">Job Description</label>
       <textarea class="form-control" [(ngModel)]="jobObj.JobDescription" name="JobDescription" rows="4"
-        placeholder="চাকরির বর্ণনা লিখুন..."></textarea>
+        placeholder="Write a description of the job..."></textarea>
     </div>
 
     <!-- Submit Button -->
     <div class="col-12 text-center">
       <button (click)="CreateJob()" class="btn btn-success btn-lg px-5" type="button">
-        পোস্ট করুন
+        Post Job
       </button>
     </div>
 

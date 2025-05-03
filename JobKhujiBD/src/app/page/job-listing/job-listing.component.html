@@ -1,21 +1,23 @@
-<section class="container py-4">
-    <div class="row">
-      <div class="col-12">
-        <div class="table-responsive">
-          <table class="table align-middle">
-            <thead class="table-dark">
+<section class="container py-4 job-table-section">
+  <div class="row">
+    <div class="col-12">
+      <div class="table-responsive">
+        <table class="table align-middle">
+          <thead class="table-dark">
+            <tr>
+              <th>#</th>
+              <th>Job Title</th>
+              <th>Category</th>
+              <th>Package</th>
+              <th>Experience</th>
+              <th>Location</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngFor="let job of jobList; let sr = index">
+              <!-- Job Row -->
               <tr>
-                <th>ক্রমিক</th>
-                <th>চাকরির শিরোনাম</th>
-                <th>বিভাগ</th>
-                <th>প্যাকেজ</th>
-                <th>অভিজ্ঞতা</th>
-                <th>অবস্থান</th>
-                <th>অ্যাকশন</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let job of jobList; let sr = index">
                 <td>{{ sr + 1 }}</td>
                 <td>{{ job.jobName }}</td>
                 <td>{{ job.categoryName }}</td>
@@ -23,26 +25,26 @@
                 <td>{{ job.experience }}</td>
                 <td>{{ job.location }}</td>
                 <td>
-                  <button class="btn btn-success btn-sm" (click)="openJobs(job)">
-                    {{ job.isExpanded ? 'বন্ধ করুন' : 'ওপেন করুন' }}
+                  <button class="btn btn-outline-primary btn-sm" (click)="openJobs(job)">
+                    {{ job.isExpanded ? 'Close' : 'Open' }}
                   </button>
                 </td>
               </tr>
-  
-              <!-- Expanded Panel -->
+
+              <!-- Expanded Panel Row -->
               <tr *ngIf="job.isExpanded">
                 <td colspan="7">
-                  <div class="p-3 bg-light rounded">
-                    <h6 class="mb-3">আবেদনকারীর তালিকা</h6>
+                  <div class="p-3 bg-light rounded shadow-sm">
+                    <h6 class="mb-3 text-primary">Applicant List</h6>
                     <div class="table-responsive">
-                      <table class="table table-bordered">
-                        <thead>
-                          <tr class="table-secondary">
-                            <th>ক্রমিক</th>
-                            <th>স্ট্যাটাস</th>
-                            <th>ইমেইল</th>
-                            <th>সম্পূর্ণ নাম</th>
-                            <th>মোবাইল নাম্বার</th>
+                      <table class="table table-bordered table-striped">
+                        <thead class="table-secondary">
+                          <tr>
+                            <th>Serial No</th>
+                            <th>Status</th>
+                            <th>Email</th>
+                            <th>Full Name</th>
+                            <th>Mobile Number</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -59,11 +61,10 @@
                   </div>
                 </td>
               </tr>
-  
-            </tbody>
-          </table>
-        </div>
+            </ng-container>
+          </tbody>
+        </table>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>

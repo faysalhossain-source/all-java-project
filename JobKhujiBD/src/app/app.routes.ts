@@ -7,9 +7,10 @@ import { JobsComponent } from './page/jobs/jobs.component';
 import { LoginComponent } from './page/login/login.component';
 import { RegistrationComponent } from './page/registration/registration.component';
 import { MyJobsComponent } from './page/my-jobs/my-jobs.component';
+import { CompaniesComponent } from './page/companies/companies.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent},
   { path: 'create-new-job', component: CreateNewJobComponent },
   { path: 'job-details', component: JobDetailsComponent },
   { path: 'job-listing', component: JobListingComponent },
@@ -17,5 +18,6 @@ export const routes: Routes = [
   { path: 'my-jobs', component: MyJobsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegistrationComponent },
-  // { path: '**', redirectTo: '' } // Redirect any undefined route to home
+  {path: 'companies-details/:name', component: CompaniesComponent}, // Dynamic route for company details
+   { path: '**', redirectTo: '' } // Redirect any undefined route to home
 ];

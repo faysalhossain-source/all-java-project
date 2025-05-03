@@ -60,4 +60,12 @@
       margin-top: 5px;
     }
   }
+  .navbar-brand img {
+    height: auto;
+    width: 100%;
+    max-width: 181px; /* Logo original size moto */
+    max-height: 31px; /* Adjust korar jonno */
+    object-fit: contain;
+  }
+  
   
