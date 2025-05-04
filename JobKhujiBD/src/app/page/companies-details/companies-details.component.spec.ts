@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { CompanyDetailsComponent } from './companies-details.component'; 
+import { CommonModule } from '@angular/common';
 
-import { CompaniesDetailsComponent } from './companies-details.component';
-
-describe('CompaniesDetailsComponent', () => {
-  let component: CompaniesDetailsComponent;
-  let fixture: ComponentFixture<CompaniesDetailsComponent>;
+describe('CompanyDetailsComponent', () => {
+  let component: CompanyDetailsComponent;
+  let fixture: ComponentFixture<CompanyDetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CompaniesDetailsComponent]
-    })
-    .compileComponents();
+      declarations: [CompanyDetailsComponent], // Declared the correct component
+      imports: [CommonModule], // Add necessary modules
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(CompaniesDetailsComponent);
+    fixture = TestBed.createComponent(CompanyDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

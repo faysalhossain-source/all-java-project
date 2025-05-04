@@ -25,21 +25,80 @@ export class RemoteJobsComponent implements OnInit {
         id: 1,
         name: 'Frontend Developer',
         description: 'Build beautiful UIs using Angular and TailwindCSS.',
-        image: 'assets/jobs/frontend.png'
+        image: 'public/frontend.jpg'
       },
       {
         id: 2,
         name: 'Remote Data Analyst',
         description: 'Analyze and visualize data for real-time dashboards.',
-        image: 'assets/jobs/data-analyst.png'
+        image: 'public/data-analyst.jpg'
       },
       {
         id: 3,
         name: 'Virtual Assistant',
         description: 'Provide online administrative support to our global clients.',
-        image: 'assets/jobs/virtual-assistant.png'
+        image: 'public/virtual-assistant.jpg'
+      },
+      {
+        id: 4,
+        name: 'Remote Web Developer',
+        description: 'Build and maintain websites using modern web technologies.',
+        image: 'public/web-developer.jpg'
+      },
+      {
+        id: 5,
+        name: 'Content Writer',
+        description: 'Create engaging written content for blogs, websites, and marketing materials.',
+        image: 'public/content-writer.jpg'
+      },
+      {
+        id: 6,
+        name: 'SEO Specialist',
+        description: 'Optimize websites to improve search engine rankings and traffic.',
+        image: 'public/seo-specialist.jpg'
+      },
+      {
+        id: 7,
+        name: 'Online Tutor',
+        description: 'Teach various subjects remotely to students of all ages.',
+        image: 'public/online-tutor.jpg'
+      },
+      {
+        id: 8,
+        name: 'Social Media Manager',
+        description: 'Create and manage social media strategies and campaigns for brands.',
+        image: 'public/social-media-manager.jpg'
+      },
+      {
+        id: 9,
+        name: 'Remote Customer Support',
+        description: 'Provide customer service and support via chat, email, or phone.',
+        image: 'public/customer-support.jpg'
+      },
+      {
+        id: 10,
+        name: 'UX/UI Designer',
+        description: 'Design user-friendly interfaces and experiences for web and mobile applications.',
+        image: 'public/ux-ui-designer.jpg'
+      },
+      {
+        id: 11,
+        name: 'Digital Marketing Specialist',
+        description: 'Manage online marketing campaigns to drive traffic and increase conversions.',
+        image: 'public/digital-marketing.jpg'
+      },
+      {
+        id: 12,
+        name: 'Online Sales Representative',
+        description: 'Sell products or services online and manage client relationships.',
+        image: 'public/online-sales.jpg'
+      },
+      {
+        id: 13,
+        name: 'Video Editor',
+        description: 'Edit and produce video content for various online platforms.',
+        image: 'public/video-editor.jpg'
       }
-      // Add more jobs here...
     ];
   }
 
