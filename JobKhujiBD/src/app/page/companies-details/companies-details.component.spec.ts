@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CompanyDetailsComponent } from './companies-details.component'; 
 import { CommonModule } from '@angular/common';
@@ -21,3 +22,6 @@ describe('CompanyDetailsComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+=======
+
+>>>>>>> 436827e2b50276cfb8216dea859ea34ed7453ca4

@@ -21,11 +21,11 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'deshboard',
+        redirectTo: 'dashboard',
         pathMatch: 'full'
       },
       {
-        path: 'deshboard',
+        path: 'dashboard',
         component: DeshboardComponent
       }
     ]
@@ -42,7 +42,8 @@ export const routes: Routes = [
       { path: 'my-jobs', component: MyJobsComponent },
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegistrationComponent },
-      { path: 'companies-details/:name', component: CompaniesComponent }, // Company details route
+      { path: 'companies', component:CompaniesComponent  },
+      {path : 'companies-details',component:CompaniesComponent}, // Company details route
       { path: 'remote', component: RemoteJobsComponent }
     ]
   },

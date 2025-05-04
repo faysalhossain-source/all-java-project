@@ -1,6 +1,6 @@
 import { NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 
 interface Job {
   id: number;
@@ -13,7 +13,7 @@ interface Job {
   selector: 'app-remote-jobs',
   templateUrl: './remote.component.html',
   styleUrls: ['./remote.component.css'],
-  imports:[RouterModule, NgFor]
+  imports:[RouterModule, NgFor,RouterLink]
 })
 export class RemoteJobsComponent implements OnInit {
 
@@ -25,7 +25,11 @@ export class RemoteJobsComponent implements OnInit {
         id: 1,
         name: 'Frontend Developer',
         description: 'Build beautiful UIs using Angular and TailwindCSS.',
+<<<<<<< HEAD
         image: 'public/frontend.jpg'
+=======
+        image: 'frontend1.jpg'
+>>>>>>> 436827e2b50276cfb8216dea859ea34ed7453ca4
       },
       {
         id: 2,

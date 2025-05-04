@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NgFor } from '@angular/common';
+import { CommonModule, NgFor } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   standalone: true,
   selector: 'app-companies',
-  imports: [NgFor, RouterModule],
+  imports: [NgFor, RouterModule, CommonModule],
   templateUrl: './companies.component.html',
 })
 export class CompaniesComponent {
@@ -25,6 +26,6 @@ export class CompaniesComponent {
       logoUrl: 'https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Save_the_Children_logo.svg/2560px-Save_the_Children_logo.svg.png',
       jobs: ['Coordinator - Safeguarding', 'Internship - ICT']
     }
-    // আরো কোম্পানি চাইলে এখানে যোগ করো
+    // add more company
   ];
 }
