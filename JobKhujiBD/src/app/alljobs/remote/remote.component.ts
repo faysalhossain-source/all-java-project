@@ -13,7 +13,8 @@ interface Job {
   selector: 'app-remote-jobs',
   templateUrl: './remote.component.html',
   styleUrls: ['./remote.component.css'],
-  imports:[RouterModule, NgFor,RouterLink]
+  standalone: true,
+  imports: [RouterModule, NgFor, RouterLink]
 })
 export class RemoteJobsComponent implements OnInit {
 
@@ -25,11 +26,7 @@ export class RemoteJobsComponent implements OnInit {
         id: 1,
         name: 'Frontend Developer',
         description: 'Build beautiful UIs using Angular and TailwindCSS.',
-<<<<<<< HEAD
         image: 'public/frontend.jpg'
-=======
-        image: 'frontend1.jpg'
->>>>>>> 436827e2b50276cfb8216dea859ea34ed7453ca4
       },
       {
         id: 2,
@@ -105,5 +102,4 @@ export class RemoteJobsComponent implements OnInit {
       }
     ];
   }
-
 }
