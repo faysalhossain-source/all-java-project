@@ -1,48 +1,26 @@
-.side-menu{
-    border-radius: 10px;
-}
 .sidebar {
-    margin-top: 20px;
-}
-.logo{
-    margin-top: 38px;
-}
-.logo a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.logo a img{
-   width: 53px;
-}
-.manu_list{
-    margin-top: 35px;
-}
-ul {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+  .logo {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .menu {
     list-style: none;
     padding: 0;
-    margin: 0;
-}
-
-li {
-    /* margin-bottom: 1rem; */
-    padding: 10px 0;
-}
-li:hover{
-    background-color: #F3FCF7;
-    color: #22C55E;
-}
-
-li a {
+  }
+  .menu li {
+    margin: 10px 0;
+  }
+  .menu a {
     text-decoration: none;
-    cursor: pointer;
-    color: inherit;
-    margin-left: 22px;
-    font-size: 17px;
-}
-li a i{
-    margin-right: 15px;
-}
-li a:hover{
-    color: #22C55E;
-}
+    color: #333;
+    display: flex;
+    align-items: center;
+  }
+  .menu i {
+    margin-right: 10px;
+  }
+  

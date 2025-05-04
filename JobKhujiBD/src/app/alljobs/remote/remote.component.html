@@ -18,7 +18,9 @@
               <p class="card-text text-muted">
                 {{ job.description || 'Apply now to work remotely in a dynamic environment.' }}
               </p>
-              <a [routerLink]="['/job', job.id]" class="btn btn-primary btn-sm">View Details</a>
+              <a [routerLink]="['/jobs', job.id]" class="btn btn-primary btn-sm">View Details</a>
+              <!-- <a [attr.href]="'/jobs/' + job.id" class="btn btn-primary btn-sm">View Details</a> -->
+
             </div>
           </div>
         </div>
