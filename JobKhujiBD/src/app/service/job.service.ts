@@ -7,14 +7,14 @@ import { Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class JobService {
-  apiEndPoint: string = 'https://freeapi.miniprojectideas.com/api/JobPortal/';
+  apiEndPoint: string = 'http://localhost:8082/api';
 
   loginSub: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   constructor(private http: HttpClient) {}
 
   registerEmployer(obj: any) {
-    return this.http.post(this.apiEndPoint + 'AddNewEmployer', obj);
+    return this.http.post(this.apiEndPoint + '/auth/register', obj);
   }
   registerAsJobSeeker(obj: any) {
     return this.http.post(this.apiEndPoint + 'AddNewJobSeeker', obj);
