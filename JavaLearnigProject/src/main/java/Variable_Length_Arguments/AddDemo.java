@@ -12,8 +12,9 @@ public class AddDemo {
 /// if you want you can use loop in this methods
     void add(int ... num){
         int sum = 0;
-        for(int x: num){//for hence loop
-            sum = sum + x;
+        for(int x: num){//for hence loop/enhance for loop
+            //sum = sum + x;
+            sum +=x;
         }
         System.out.println(sum);
     }
